@@ -1,25 +1,38 @@
 {
-  "id": "module",
-  "title": "New Module",
-  "description": "",
+  "id": "item-piles-cosmere-rpg",
+  "title": "ItemPiles for Cosmere RPG",
+  "description": "Support for the Cosmere Rpg in the ItemPiles module",
   "version": "#{VERSION}#",
   "library": "false",
   "manifestPlusVersion": "1.2.0",
   "compatibility": {
-    "minimum": 10,
-    "verified": 10,
-    "maximum": 11
+    "minimum": 12,
+    "verified": 12,
+    "maximum": 12
   },
   "authors": [
     {
-      "name": "The League of Extraordinary FVTT Developers",
-      "url": "https://github.com/League-of-Foundry-Developers",
-      "discord": "discordID#0001"
+      "name": "Boxfriend",
+      "url": "https://github.com/boxfriend",
+      "discord": "boxfriend"
     }
   ],
   "relationships": {
-    "systems": [],
-    "requires": []
+    "systems": [
+      {
+        "id": "cosmere-rpg",
+        "type": "system",
+        "compatibility": {
+          "verified": "1.0.0"
+        }
+      }
+    ],
+    "requires": [
+      {
+        "id": "item-piles",
+        "type": "module",
+      }
+    ]
   },
   "esmodules": [
     "scripts/module.js"
