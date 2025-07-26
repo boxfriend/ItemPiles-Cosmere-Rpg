@@ -9,7 +9,7 @@
 
 # ItemPiles for Cosmere Rpg
 
-This module integrates the Cosmere Rpg system with the ItemPiles module.
+This module integrates the [Cosmere Rpg system](https://foundryvtt.com/packages/cosmere-rpg) with the [ItemPiles module](https://foundryvtt.com/packages/item-piles).
 
 ## Changelog
 
