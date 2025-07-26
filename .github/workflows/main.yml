@@ -142,3 +142,24 @@ jobs:
           artifacts: './module.json, ./module.zip'
           tag: ${{ github.event.release.tag_name }}
           body: ${{ github.event.release.body }}
+          
+      - name: Deploy to Foundry
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: 'https://foundryvtt.com/_api/packages/release_version/'
+          method: 'POST'
+          customHeaders: '{ "Content-Type":"application/json", "Authorization":${{secrets.FOUNDRYAPIKEY}} }'
+          data: |
+            '{ 
+                "id": ${{ fromJson(module.json).id }}, 
+                "dry-run": true,
+                "release": { 
+                    "version": ${{steps.get_version.outputs.version-without-v}}, 
+                    "manifest": ${{ env.latest_manifest_url }}, 
+                    "compatibility": {
+                        "minimum": ${{ fromJson(module.json).compatibility.minimum }},
+                        "verified": ${{ fromJson(module.json).compatibility.verified }},
+                        "maximum": ${{ fromJson(module.json).compatibility.maximum }}
+                    }
+                } 
+            }'
