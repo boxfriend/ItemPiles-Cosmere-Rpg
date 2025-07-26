@@ -30,7 +30,7 @@
     "requires": [
       {
         "id": "item-piles",
-        "type": "module",
+        "type": "module"
       }
     ]
   },
