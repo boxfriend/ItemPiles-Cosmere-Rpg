@@ -160,7 +160,6 @@ jobs:
           data: >-
             {
               "id": "${{ fromJson(env.MODULE_JSON).id }}",
-              "dry-run": true,
               "release": {
                 "version": "${{ steps.get_version.outputs.version-without-v }}",
                 "manifest": "${{ env.latest_manifest_url }}",
