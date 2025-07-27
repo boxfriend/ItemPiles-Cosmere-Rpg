@@ -24,7 +24,7 @@ Hooks.once('item-piles-ready', async function() {
         "ITEM_FILTERS": [
             {
                 "path": "type",
-                "filters": "action,ancestry,connection,culture,goal,injury,path,power,specialty,talent"
+                "filters": "action,ancestry,connection,culture,goal,injury,path,power,specialty,talent,trait,talent_tree"
             }
         ],
 		"UNSTACKABLE_ITEM_TYPES": ["weapon", "armor"],
