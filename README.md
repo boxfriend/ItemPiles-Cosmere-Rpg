@@ -14,5 +14,9 @@ This module integrates the [Cosmere Rpg system](https://foundryvtt.com/packages/
 
 ## Changelog
 
+### v0.2.0
+- Fix issue with currency not working, it has not been made into an item and should work correctly
+- This fix resets configs
+
 ### v0.1.0
 - First release, initial integration
